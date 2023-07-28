@@ -1,4 +1,3 @@
-
 import { knex } from "knex"
 
 export abstract class BaseDatabase {
