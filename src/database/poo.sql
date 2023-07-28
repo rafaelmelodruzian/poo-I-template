@@ -1,5 +1,4 @@
--- Active: 1690554399062@@127.0.0.1@3306
-
+-- Active: 1690290366335@@127.0.0.1@3306
 CREATE TABLE users (
     id TEXT PRIMARY KEY UNIQUE NOT NULL,
     name TEXT NOT NULL,
@@ -14,8 +13,8 @@ CREATE TABLE accounts (
     balance REAL DEFAULT (0) NOT NULL,
     created_at TEXT DEFAULT (DATETIME()) NOT NULL,
     FOREIGN KEY (owner_id) REFERENCES users (id)
-	ON UPDATE CASCADE
-	ON DELETE CASCADE
+      ON UPDATE CASCADE
+      ON DELETE CASCADE
 );
 
 INSERT INTO users (id, name, email, password)
